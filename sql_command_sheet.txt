@@ -1,0 +1,21 @@
+SQL CHEAT SHEET:
+List elements of table - TABLE mytbl;
+List tables - \d
+List table data formats - \d mytbl
+INSERT INTO mytbl VALUES(......., ‘my name’, 22, ‘this is a description’);
+
+PERTINENT QUERIES:
+Basic structure: SELECT {columns wanted / *} FROM {table wanted} WHERE {special cond (opt)}
+EX: SELECT * FROM classes WHERE course_code = ECSE2050
+
+List of all courses in the catalog
+SELECT * FROM classes;
+List certain attributes of a certain course 
+SELECT course_desc FROM classes WHERE course_code = 'MATH2400';
+List the prereqs of a course:
+SELECT * FROM course_to_prereqs WHERE curr_course = 'ECSE2050';
+SELECT pre_course FROM course_to_prereqs WHERE curr_course = 'ECSE2050';
+List the the associated details of course considered prereqs of a target course:
+SELECT classes.* FROM classes JOIN course_to_prereqs ON classes.course_code = course_to_prereqs.pre_course WHERE course_to_prereqs.curr_course = 'ECSE2050';
+SELECT classes.course_desc FROM classes JOIN course_to_prereqs ON classes.course_code = course_to_prereqs.pre_course WHERE course_to_prereqs.curr_course = 'ECSE2050';
+SELECT classes.course_name, classes.course_desc FROM classes JOIN course_to_prereqs ON classes.course_code = course_to_prereqs.pre_course WHERE course_to_prereqs.curr_course = 'ECSE2050';
