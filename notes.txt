@@ -1,0 +1,103 @@
+#NOTES PAGE
+
+follow this [link](https://docs.google.com/document/d/17TX3ghZS8P4h2Q8mrK8DJlSPeP2E7asecXC73qY1AJU/edit?usp=sharing) to see more in depth diagrams on the model.
+
+##Week 0.5 - 09/15/2023 - 09/19/2023:
+###Hierarchical Structure:
+https://www.geeksforgeeks.org/hierarchical-model-in-dbms/
+Tree-like relationships
+One parent - multiple children
+No parent == root
+No children == leaves
+Used mostly to model real-world occurrences eg biological structures, political systems 
+
+Advantages: (General) 
+Logically simple, parent + child, has one to many children, many to one parent
+Data is shared
+Data security
+Easy to design
+Disadvantages: (General)
+Complex to implement?
+Involuntary deletion of different further child nodes at the deletion of one higher node
+Opinion for our project: parts of this functions well for us in terms of concentration progression
+Issue #1: one class can be part of multiple concentrations (eg. lower core classes)
+Pro #1: very clear straight-forward progression modeling || maybe lower core classes can be stored in a different model ?
+Consideration: At the EOD, all classes will end up being a part of a pathway? so maybe to have inter-concentration class, we represent it x amount of times (makes duplicates I don’t know about that)
+
+###Network Database:
+https://www.geeksforgeeks.org/network-model-in-dbms/
+Seems to be a more flexible interconnected hierarchical DB
+Can consist of multiple parent segments and all segments are grouped as levels
+Represented as a graph structure
+Owner == Parents || Member == Child
+
+Advantages: (General)
+Easy to design/implement
+Has 1:M, M:1, M:N relationships
+Data access is relatively easy
+Disadvantages: (General)
+DB structure is complex because all things point to other points to allow for M:N or m1 of 1m
+Design or structure not very user friendly? What does this mean? – to research
+No automated query optimization
+Conclusion: 
+The M:N capabilities is extremely helpful – exactly what we need
+Issues with implementation and data mod
+
+##Week 1.0 - 09/19/2023 - 09/22/2023:
+###Relational Model in DBMS
+https://www.geeksforgeeks.org/relational-model-in-dbms/ 
+Collection of tables each with a unique name - w attributes
+Literally just a graph with rows and columns – idk what to do with this really
+Constraints on data modification? Good for data protection
+Constraints on a domain? Good for data validation 
+Unique keys
+Not sure if we can use this because it is too graphic
+
+###Object Oriented Database:
+https://www.geeksforgeeks.org/difference-between-rdbms-and-oodbms/ 
+OODB implements object-oriented concepts such as classes of objects, object identity, polymorphism, encapsulation, and inheritance. 
+An object-oriented database stores complex data as compared to relational database.
+Week 1.5 - 09/22/2023 - 09/26/2023
+
+From MongoDB:
+Main types of dbs:
+Hierarchical DBS:	
+1 parent to many children | many children to one parent | child = 1 parent
+Rigid navigation | Fast Lookup (quick queries)
+Relational DBS:
+“Stores data in discrete tables which can be joined together by fields known as foreign keys”
+Uses SQL (structured query languages) for CRUD operations
+Comes back to this maybe – tables can be linked?
+Non-Relational DBS:
+Any database that doesn’t use a relational model – doesn’t have rows and columns table structure
+Document DB - 
+stores data in a JSON, BSON, or XML doc || can be interpreted by humans and computer and across machines – but it is just a document with info/simplistic database – needs query program over it to get results
+“Document databases are popular with developers because they offer the flexibility to rework their document structures as needed to suit their applications.”
+Graph databases -
+Focuses on the relationship between data elements
+Each element is contained as a node
+Connections between elements are called links/relationships
+Connections are first class elements, stored directly
+Optimized to capture and search the connections between elements – outperforms joining of sql tables
+
+
+Ex: MongoDB
+OOP databases
+Oop and querying of data across complex relationships is fast and powerful
+
+
+Final Decision: PostGreSql
+Going to start with circuits?
+Should I clean up the data on my side?
+
+Waiting on Prof Turner — setting up a dotcio arrangement for me 
+
+INTRO ECSE → Elec circuits → intro elec → Micro Elec (EE core) → VLIS Design (electives)
+
+– 1 TB external Hard drive 
+
+10/24/2023 - 
+https://www.geeksforgeeks.org/introduction-of-er-model/
+https://www.geeksforgeeks.org/relational-model-in-dbms/
+
+https://www.geeksforgeeks.org/mapping-from-er-model-to-relational-model/?ref=lbp
