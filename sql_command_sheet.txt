@@ -18,4 +18,18 @@ SELECT pre_course FROM course_to_prereqs WHERE curr_course = 'ECSE2050';
 List the the associated details of course considered prereqs of a target course:
 SELECT classes.* FROM classes JOIN course_to_prereqs ON classes.course_code = course_to_prereqs.pre_course WHERE course_to_prereqs.curr_course = 'ECSE2050';
 SELECT classes.course_desc FROM classes JOIN course_to_prereqs ON classes.course_code = course_to_prereqs.pre_course WHERE course_to_prereqs.curr_course = 'ECSE2050';
+
+
 SELECT classes.course_name, classes.course_desc FROM classes JOIN course_to_prereqs ON classes.course_code = course_to_prereqs.pre_course WHERE course_to_prereqs.curr_course = 'ECSE2050';
+
+List the refresher material for all the skills of a class:
+SELECT * FROM refresh_material WHERE skill_code = 'S_ECSE2010_1';
+
+List the refresher material for a specific skill:
+SELECT * FROM refresh_material JOIN skills ON refresh_material.skill_code = skills.skill_code;
+
+List the skills of a class:
+SELECT * FROM skills JOIN skill_to_course ON skills.skill_code = skill_to_course.skill_code WHERE skill_to_course.course_code = 'ECSE2010';
+
+List the classes that use a skill:
+SELECT * FROM skill_to_course WHERE skill_code = 'S_ECSE2010_1';
