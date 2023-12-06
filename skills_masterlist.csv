@@ -1,0 +1,9 @@
+skill_code,skill_desc
+S_ECSE2010_1,Complex algebra and phasors
+S_ECSE2010_2,Sketching and interpreting Bode plots
+C_ECSE2050_1,Benchtop instrumentation
+C_ECSE2050_2, Kirchoff laws for circuit analysis Frequency domain analysis
+S_ECSE2210_1,Dummy Skill 1
+C_ECSE2210_2,Dummy Concept 2
+C_ECSE4220_1,"Design transistor-level static and dynamic CMOS gates, transmission gate logic, layout for unbroken diffusion strips using Logic Graphs & Euler Paths"
+C_ECSE4220_2,"Analyze speed and power, understand trade-offs, estimate switching speed"
